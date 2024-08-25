@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     queue.push(neighbor);
                     visited.add(neighbor);
                     parentMap.set(neighbor, current);
-                    neighbor.style.backgroundColor = "blue"; // Mark as visited
-                    await delay(0.1); // Pause for 50 milliseconds
+                    neighbor.style.backgroundColor = "yellow"; // Mark as visited
+                    await delay(0.01); // Pause for 50 milliseconds
                 }
             }
         }
@@ -64,9 +64,9 @@ document.addEventListener("DOMContentLoaded", function() {
     async function reconstructPath(finish, parentMap) {
         let current = finish;
         while (current) {
-            current.style.backgroundColor = "blue";
+            current.style.backgroundColor = "red"; // Mark the path in red
             current = parentMap.get(current);
-            await delay(50); // Pause for 50 milliseconds
+            await delay(0.01); // Pause for 50 milliseconds
         }
     }
 

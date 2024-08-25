@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100x100 Maze</title>
+    <style>
+        #grid {
+            display: grid;
+            grid-template-columns: repeat(100, 10px);
+            grid-template-rows: repeat(100, 10px);
+            
+        }
+        .cell {
+            width: 10px;
+            height: 10px;
+            background-color: black;
+        }
+        .path {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>mark the starting point as red and ending point as green and click on the solve button</h1>
+    <div id="grid"></div>
+    <button id="solveButton">Solve Maze</button>
+    <script src="script.js"></script>
+    <script src="solve.js"></script>
+</body>
+</html>
